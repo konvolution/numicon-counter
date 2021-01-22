@@ -1,0 +1,122 @@
+.App {
+  margin: auto;
+  font-family: sans-serif;
+  text-align: center;
+  width: 40vw;
+  min-width: 5.5in;
+}
+
+.App-UpDownContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  margin: 0 0.1cm;
+}
+
+.Numicon-block {
+  font-size: 0;
+  display: flex;
+  flex-direction: column;
+  flex: none;
+  padding: 0.05cm;
+}
+
+.fadeIn {
+  animation: fadein 1s;
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.Numicon-row {
+  display: flex;
+  flex: none;
+  flex-direction: row;
+}
+
+.Numicon-counter {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.1cm;
+}
+
+.Numicon-counter-dot {
+  height: 0.25in;
+  width: 0.25in;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.NumberDiagram {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 32pt;
+  display: flex;
+  flex-direction: column;
+  min-width: 5.5in;
+}
+
+.NumberDiagram-row {
+  padding: 0.1cm;
+  display: flex;
+  flex-direction: row;
+}
+
+.NumberDiagram-header {
+  background-color: #fc0;
+  color: purple;
+  margin: 0.1cm;
+  font-size: 80%;
+}
+
+.NumberDiagram-tens-column {
+  padding: 0.1cm;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  flex: 2 0 0;
+}
+
+.NumberDiagram-tens-pair {
+  display: flex;
+  flex-direction: row;
+}
+
+.NumberDiagram-units-column {
+  padding: 0.1cm;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  flex: 1 0 0;
+}
+
+.UpDown {
+  font-size: 32pt;
+  display: flex;
+  flex-direction: row;
+}
+
+.UpDown-Button.UpDown-Button-Disabled {
+  background-color: lightgray;
+  cursor: default;
+}
+.UpDown-Button {
+  background-color: orange;
+  margin: 0.1cm;
+  width: 1.25cm;
+  height: 1.25cm;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.UpDown-Button:not(.UpDown-Button-Disabled):hover {
+  background-color: #ffc500;
+}
