@@ -20,8 +20,10 @@ export const NumberDiagram: React.FunctionComponent<NumberDiagramProps> = ({
 }) => (
   <div className="NumberDiagram">
     <div className="NumberDiagram-row">
-      <div className="NumberDiagram-tens-column NumberDiagram-header">10s</div>
-      <div className="NumberDiagram-units-column NumberDiagram-header">1s</div>
+      <div className="NumberDiagram-tens-column NumberDiagram-header">Tens</div>
+      <div className="NumberDiagram-units-column NumberDiagram-header">
+        Ones
+      </div>
     </div>
     <div className="NumberDiagram-row">
       <div className="NumberDiagram-tens-column">
