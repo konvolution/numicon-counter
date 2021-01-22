@@ -12,11 +12,13 @@ export const UpDown: React.FunctionComponent<UpDownProps> = ({
   onReset
 }) => (
   <div className="UpDown">
-    <div
-      className={`UpDown-Button${onReset ? "" : " UpDown-Button-Disabled"}`}
-      onClick={onReset}
-    >
-      0
+    <div style={{ flex: "auto" }}>
+      <div
+        className={`UpDown-Button${onReset ? "" : " UpDown-Button-Disabled"}`}
+        onClick={onReset}
+      >
+        0
+      </div>
     </div>
     <div
       className={`UpDown-Button${onDecrement ? "" : " UpDown-Button-Disabled"}`}
