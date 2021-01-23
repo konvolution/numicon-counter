@@ -20,19 +20,6 @@
   padding: 0.05cm;
 }
 
-.fadeIn {
-  animation: fadein 1s;
-}
-
-@keyframes fadein {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
 .Numicon-row {
   display: flex;
   flex: none;
@@ -93,6 +80,10 @@
   flex-direction: column;
   align-items: flex-start;
   flex: 1 0 0;
+}
+
+.NumberDiagram-animation {
+  transition: left 1s 0.5s, top 1s 0.5s;
 }
 
 .UpDown {

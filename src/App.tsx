@@ -4,19 +4,11 @@ import { NumberDiagram } from "./NumberDiagram";
 import { UpDown } from "./UpDown";
 
 export default function App() {
-  const [state, setState] = React.useState({ value: 0, delta: 0 });
+  const [value, setValue] = React.useState(0);
 
-  const onIncrement = React.useCallback(
-    () => setState({ value: state.value + 1, delta: 1 }),
-    [state]
-  );
-  const onDecrement = React.useCallback(
-    () => setState({ value: state.value - 1, delta: -1 }),
-    [state]
-  );
-  const onReset = React.useCallback(() => setState({ value: 0, delta: 0 }), []);
-
-  const { value, delta } = state;
+  const onIncrement = React.useCallback(() => setValue(value + 1), [value]);
+  const onDecrement = React.useCallback(() => setValue(value - 1), [value]);
+  const onReset = React.useCallback(() => setValue(0), []);
 
   return (
     <div className="App">
@@ -30,7 +22,7 @@ export default function App() {
           onReset={value !== 0 ? onReset : undefined}
         />
       </div>
-      <NumberDiagram value={value} delta={delta} />
+      <NumberDiagram value={value} />
     </div>
   );
 }
